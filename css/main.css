@@ -109,7 +109,10 @@ body {
 header,
 footer {
   background: #202322;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 
@@ -118,31 +121,85 @@ footer {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
 }
+
+figure {
+  margin: 0;
+ }
+
+ h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.875em;
+  margin: 0;
+}
+ 
+h3, 
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  margin: 20px 0;
+}
+ 
+p {
+  font-size: .875em;
+  line-height: 1.285;
+}
+
 
 /* Header Styles */
 
-.flex-container img {
-  width: 50%;
+header {
+  padding: 15px 0;
 }
 
-.flex-container nav {
+header .flex-container {
+  margin: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  flex-flow: row nowrap;
-  flex: 1;
+  flex-flow: row wrap;
 }
 
-.flex-container nav ul {
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.header-divider {
+  background: #3a3a3a; 
+  height: 1px;
+  width: 100%;
+  margin: 10px 0 20px 0;
+}
+
+header nav {
+  width: 60%;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+}
+
+header nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
   list-style: none;
-  width: 40%;
-  margin-right: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  font-size: 1.125em;
 }
 
 nav ul a {
@@ -155,13 +212,23 @@ nav ul a {
 /* Hero Section Styles */
 
 .hero-section {
-  background: url('../img/jake-melara-30679-unsplash-v2.jpg') center;
+  display: flex; 
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  background: url('../img/jake-melara-30679-unsplash-v2.jpg');
   background-size: cover;
-  height: 550px;
-  padding: 10px 150px 10px 150px;
-  font-size: 2rem;
-  font-weight: 400;
+  background-position: center;
+  min-height: 500px;
 }
+
+.hero-section h1 {
+    font-size: 2.25em;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif; 
+    font-weight: 500; 
+    line-height: 1.2; 
+}
+
 
 /* Newsletter Section Styles */
 
@@ -176,25 +243,43 @@ aside .newsletter-section {
   align-items: center;
   flex-flow: row wrap;
   width: 100%;
+  padding: 20px 10px 40px 10px;
 }
 
 aside .newsletter-section .flex-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   flex-flow: row wrap;
-  width: 50%;
-}
-.newsletter-section .form-description {
-  width: 50%;
+  width: 95%;
 }
 
-.newsletter-section .sign-up-form {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-flow: column wrap;
-  width: 50%;
+aside .flex-container .form-description,
+aside .flex-container .sign-up-form {
+  width: 40%;
+  margin: 0;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 90%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+
+input[type=button] {
+  width: 90%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Features Section Styles */
@@ -205,8 +290,11 @@ aside .newsletter-section .flex-container {
   align-items: center;
   background: url('../img/rawpixel-800820-unsplash1.jpg');
   background-size: cover;
-  height: 700px;
   text-align: center;
+}
+
+.features h2 {
+  text-align: left;
 }
 
 .features .flex-container {
@@ -215,12 +303,13 @@ aside .newsletter-section .flex-container {
   align-items: center;
   flex-flow: row wrap;
   width: 75%;
+  margin: 50px 0;
 } 
 
 .features .features-item {
   justify-content: center;
   align-items: space-around;
-  flex: 1 25%;
+  flex: 1 50%;
   padding: 30px;
 }
 
@@ -229,9 +318,6 @@ aside .newsletter-section .flex-container {
   margin-bottom: 40px;
 }
 
-.flex-container h1 {
-  text-align: left;
-}
 
 /* Testimonial Styles */
 
@@ -242,47 +328,28 @@ aside .newsletter-section .flex-container {
   flex-flow: row wrap;
   background: #2a423a;
   width: 100%;
-  padding-bottom: 50px;
-  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
-.testimonial-section .flex-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  width: 80%;
+
+.testimonial-section h2 {
+  margin-bottom: 40px;
+  line-height: 1;
 }
 
-.testimonial-title {
-  justify-content: flex-start;
-  font-size: 1.5rem;
-  margin-left: 50px;
+.testimonial-section h3 {
+  width: 55%;
+  margin: 20px 0;
 }
 
-.testimonial-image {
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-}
 
-.testimonial-content {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-flow: row wrap;
-  width: 50%;
-}
-
-.testimonial-image figure {
-  width: 90%;
-}
-
-.testimonial-image figure img {
-  width: 100%;
-}
 
 /* Footer Styles */
+
+footer {
+  padding-bottom: 20px;
+}
 
 footer .footer-content {
   display: flex;
@@ -293,11 +360,13 @@ footer .footer-content {
 }
 
 .contact-info {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .contact-info address {
@@ -306,11 +375,13 @@ footer .footer-content {
 }
 
 .social {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .social-links {
@@ -419,9 +490,253 @@ footer p {
    Modify as content requires.
    ========================================================================== */
 
-@media desktop (min-width: 1200px) {
 
+   @media only screen and (min-width:768px) {
+    /*Tablet styles here*/
+  
+    /* General styles */
+    .flex-container {
+      max-width: 640px;
+      margin: 100px 0;
+    }
+        
+  
+    h3 {
+        font-size: 1.5em;
+        line-height: 1.25;
+    }
+  
+    /* Header */
+    header {
+      justify-content: space-around;
+      padding: 33px 0;
+    }
+  
+    header .flex-container {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    header figure {
+      width: 30%;
+    }
+  
+    header nav {
+      width: 20%;
+    }
+  
+    header nav ul {
+      justify-content: space-between;
+    }
+  
+    .header-divider {
+      display: none;
+    }
+
+    /* Hero Area */
+  
+    .hero-section {
+      min-height: 600px;
+    }
+
+    .hero-section .flex-container {
+      align-items: flex-start;
+    }
+    
+    .hero-section h1 {
+      font-size: 3em;
+      line-height: 1;
+      margin: 0;
+  }
+  
+    /* Aside */
+    aside .newsletter-section {
+      padding: 0;
+      margin: 0;
+    }
+
+    aside .flex-container {
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+    }
+
+    aside .flex-container .form-description,
+    aside .flex-container .sign-up-form {
+      width: 40%;
+      margin: 0;
+    }
+  
+    /* Features */
+  
+    .features h2 {
+      margin-bottom: 20px;
+    }
+  
+    .features .features-item {
+      justify-content: center;
+      flex: 1 25%;
+      padding: 30px;
+    }
+  
+    .features i {
+      margin-bottom: 30px;
+    }
+  
+    /* Reviews */
+    
+    .testimonial-section .flex-container {
+      margin: 30px 0;
+      justify-content: flex-start;
+    }
+  
+    .testimonial-section h2 {
+      width: 85%;
+    }
+  
+    .testimonial-section figure {
+      width: 49%;
+    }
+  
+    .testimonial-section h3 {
+      width: 75%;
+      margin: 0;
+    }
+
+    .testimonial-section article {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .testimonial-section article figure,
+    .testimonial-section article div {
+      width: 49%;
+    }
+
+    /* Footer */
+
+    footer .footer-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row wrap;
+      width: 95%;
+    }
+
+    .contact-info {
+      width: 50%;
+      padding: 0;
+    }
+
+    .social {
+      width: 50%;
+      padding: 0;
+    }
+  }
+@media only screen and (min-width: 1200px) {
+  /*Desktop Styles here*/
+    /* Header Styles */
+
+    .flex-container {
+      max-width: 960px;
+    }
+
+    header {
+      padding: 15px 0;
+      justify-content: space-around;
+    }
+  
+    header .flex-container {
+      justify-content: space-between;
+    }
+  
+    header figure {
+      width: 30%;
+    }
+  
+    header nav {
+      width: 20%;
+    }
+  
+    header nav ul {
+      justify-content: space-between;
+    }
+
+    .header-divider {
+      display: none;
+    }
+
+    .flex-container figure {
+    width: 50%;
+    justify-content: flex-start;
+    }
+
+  .flex-container figure img {
+    width: 60%;
+    }
+
+  .flex-container nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 30%;
+    }
+
+  .flex-container nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap;
+    list-style: none;
+    width: 100%;
+    margin-right: 20px;
+    }
+
+  .hero-section {
+    min-height: 600px;
+  }
+    
+  .hero-section .flex-container {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 50px 0;
+  }
+    
+  .hero-section h1 {
+    font-size: 3.75em;
+    line-height: 1;
+    width: 80%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  aside .newsletter-section .flex-container {
+    padding: 30px 0;
+    width: 70%;
+  }
+    /* Reviews */
+  
+    .testimonial-section h2 {
+      padding-bottom: 50px; 
+      margin: 0;
+    }
+    
+    .flex-container figure img {
+      width: 80%;
+    }
+    .testimonial-section article figure,
+    .testimonial-section article div {
+      width: 50%;
+    }
+
+    .testimonial-section h3, p {
+      width: 65%;
+    }
 }
+
+
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
