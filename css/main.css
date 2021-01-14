@@ -336,27 +336,37 @@ input[type=button] {
   margin: 20px 0;
 }
 
-/* Mission Styles - Mobile */
+/* About Styles - Mobile */
 
 .mission-section {
+  display: flex;
+  flex: row wrap;
+  justify-content: center;
   background: #527158;
   width: 100%;
-  padding: 20px 15px 40px 15px;
+  padding: 20px 0 40px 0;
+}
+
+.mission-section h1 {
+  font-weight: normal;
 }
 
 .contact-us {
   background: #2a423a;
   width: 100%;
-  padding: 20px 15px 40px 15px;
+  padding: 20px 0 40px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-us h1 {
   width: 100%;
   margin: 0;
+  font-weight: normal;
 }
 
 .contact-us h4 {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .contact-us .general-info {
@@ -642,6 +652,66 @@ footer p {
       margin: 0;
     }
 
+    /* About Styles - Tablet */
+  
+    .mission-section {
+      padding: 30px 0;
+    }
+
+    .mission-section .flex-container {
+      margin: 0;
+      width: 75%;
+    }
+
+    .mission-section .flex-container .mission-article {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    
+    .mission-section .flex-container .mission-article p {
+      width: 45%;
+    }
+
+      
+    .contact-us {
+      display: flex;
+      flex: row wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .contact-us .flex-container {
+      justify-content: flex-start;
+      flex: row wrap;
+      align-items: flex-start;
+      margin: 50px 0;
+      width: 75%;
+    }
+   
+    .contact-us h1 {
+      width: 70%;
+    }
+      
+    .contact-us .general-info {
+      width: 50%;
+      font-size: .75em;
+    }
+    
+    .contact-us .chat-info {
+      width: 50%;
+      font-size: .75em;
+    }
+  
+    .contact-us h4 {
+      font-size: 1.50em;
+    }
+    
+    .map-container {
+      padding-bottom: 50%;
+    }
+
     /* Footer - Tablet Homepage */
 
     .contact-info {
@@ -724,6 +794,30 @@ footer p {
     .testimonial-section h3, p {
       width: 65%;
     }
+
+
+    /* About Styles - Desktop */
+  
+    .mission-section .flex-container {
+      margin: 0;
+      width: 75%;
+      justify-content: flex-start;
+    }
+
+    .mission-section h1 {
+      width: 90%;
+      font-size: 3em;
+    }
+    .map-container {
+      padding-bottom: 30%;
+    }
+    
+    .contact-us h1 {
+      font-size: 3em;
+      width: 100%
+    }
+
+
 }
 
 @media print,
