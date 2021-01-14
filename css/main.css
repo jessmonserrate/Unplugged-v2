@@ -88,13 +88,7 @@ textarea {
    ========================================================================== */
 
 
-/* General Styles */
-
-img {
-  width: 100%;
-}
-
-   /* Base Styles */
+/* Base Styles - Mobile */
 
 html {
   font-size: 16px;
@@ -115,7 +109,6 @@ footer {
   flex-flow: row wrap;
 }
 
-
 .flex-container {
   display: flex;
   flex-flow: row wrap;
@@ -127,6 +120,10 @@ footer {
 figure {
   margin: 0;
  }
+
+ img {
+  width: 100%;
+}
 
  h2 {
   font-family: 'Poppins', sans-serif;
@@ -149,7 +146,7 @@ p {
 }
 
 
-/* Header Styles */
+/* Header Styles - Mobile */
 
 header {
   padding: 15px 0;
@@ -209,7 +206,7 @@ nav ul a {
 }
 
 
-/* Hero Section Styles */
+/* Hero Section Styles - Mobile Homepage */
 
 .hero-section {
   display: flex; 
@@ -230,7 +227,7 @@ nav ul a {
 }
 
 
-/* Newsletter Section Styles */
+/* Newsletter Section Styles - Mobile Homepage */
 
 aside {
   background: #527158;
@@ -282,7 +279,7 @@ input[type=button] {
   text-transform: uppercase;
 }
 
-/* Features Section Styles */
+/* Features Section Styles - Mobile Homepage */
 
 .features {
   display: flex;
@@ -293,10 +290,6 @@ input[type=button] {
   text-align: center;
 }
 
-.features h2 {
-  text-align: left;
-}
-
 .features .flex-container {
   display: flex;
   justify-content: center;
@@ -305,7 +298,9 @@ input[type=button] {
   width: 75%;
   margin: 50px 0;
 } 
-
+.features h2 {
+  text-align: left;
+}
 .features .features-item {
   justify-content: center;
   align-items: space-around;
@@ -318,8 +313,7 @@ input[type=button] {
   margin-bottom: 40px;
 }
 
-
-/* Testimonial Styles */
+/* Testimonial Styles - Mobile Homepage */
 
 .testimonial-section {
   display: flex;
@@ -332,7 +326,6 @@ input[type=button] {
   padding-top: 20px;
 }
 
-
 .testimonial-section h2 {
   margin-bottom: 40px;
   line-height: 1;
@@ -343,9 +336,58 @@ input[type=button] {
   margin: 20px 0;
 }
 
+/* Mission Styles - Mobile */
 
+.mission-section {
+  background: #527158;
+  width: 100%;
+  padding: 20px 15px 40px 15px;
+}
 
-/* Footer Styles */
+.contact-us {
+  background: #2a423a;
+  width: 100%;
+  padding: 20px 15px 40px 15px;
+}
+
+.contact-us h1 {
+  width: 100%;
+  margin: 0;
+}
+
+.contact-us h4 {
+  font-weight: bold;
+}
+
+.contact-us .general-info {
+  width: 100%;
+}
+
+.contact-us .chat-info {
+  width: 100%;
+}
+
+.contact-us address {
+  font-style: normal;
+}
+
+.map-container {
+  position: relative;
+  padding-bottom: 125%;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Footer Styles - Mobile */
 
 footer {
   padding-bottom: 20px;
@@ -390,15 +432,15 @@ footer .footer-content {
   flex-flow: row nowrap;
 }
 
-footer p {
-  width: 100%;
-  text-align: center;
-}
-
 .social-links i {
   color: #295748;
   padding: 10px;
   font-size: 1.75rem;
+}
+
+footer p {
+  width: 100%;
+  text-align: center;
 }
 
 
@@ -494,19 +536,18 @@ footer p {
    @media only screen and (min-width:768px) {
     /*Tablet styles here*/
   
-    /* General styles */
+    /* General styles - Tablet Homepage */
     .flex-container {
       max-width: 640px;
       margin: 100px 0;
     }
-        
   
     h3 {
         font-size: 1.5em;
         line-height: 1.25;
     }
   
-    /* Header */
+    /* Header - Tablet Homepage */
     header {
       justify-content: space-around;
       padding: 33px 0;
@@ -533,23 +574,19 @@ footer p {
       display: none;
     }
 
-    /* Hero Area */
+    /* Hero Area - Tablet Homepage*/
   
     .hero-section {
       min-height: 600px;
     }
 
-    .hero-section .flex-container {
-      align-items: flex-start;
-    }
-    
     .hero-section h1 {
       font-size: 3em;
       line-height: 1;
       margin: 0;
   }
   
-    /* Aside */
+    /* Aside - Tablet Homepage*/
     aside .newsletter-section {
       padding: 0;
       margin: 0;
@@ -557,25 +594,20 @@ footer p {
 
     aside .flex-container {
       margin: 10px 0;
-      display: flex;
-      justify-content: space-between;
-      flex-flow: row wrap;
     }
 
     aside .flex-container .form-description,
     aside .flex-container .sign-up-form {
-      width: 40%;
-      margin: 0;
+       padding: 15px;
     }
   
-    /* Features */
+    /* Features - Tablet Homepage */
   
     .features h2 {
       margin-bottom: 20px;
     }
   
     .features .features-item {
-      justify-content: center;
       flex: 1 25%;
       padding: 30px;
     }
@@ -584,7 +616,7 @@ footer p {
       margin-bottom: 30px;
     }
   
-    /* Reviews */
+    /* Testimonials - Tablet Homepage */
     
     .testimonial-section .flex-container {
       margin: 30px 0;
@@ -595,15 +627,6 @@ footer p {
       width: 85%;
     }
   
-    .testimonial-section figure {
-      width: 49%;
-    }
-  
-    .testimonial-section h3 {
-      width: 75%;
-      margin: 0;
-    }
-
     .testimonial-section article {
       display: flex;
       justify-content: space-between;
@@ -614,15 +637,12 @@ footer p {
       width: 49%;
     }
 
-    /* Footer */
-
-    footer .footer-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-flow: row wrap;
-      width: 95%;
+    .testimonial-section h3 {
+      width: 75%;
+      margin: 0;
     }
+
+    /* Footer - Tablet Homepage */
 
     .contact-info {
       width: 50%;
@@ -634,40 +654,24 @@ footer p {
       padding: 0;
     }
   }
+
 @media only screen and (min-width: 1200px) {
   /*Desktop Styles here*/
-    /* Header Styles */
+    
+      /* General Styles - Desktop Homepage */
 
     .flex-container {
       max-width: 960px;
     }
 
+    /* Header Styles - Desktop Homepage */
+
     header {
       padding: 15px 0;
       justify-content: space-around;
     }
-  
-    header .flex-container {
-      justify-content: space-between;
-    }
-  
-    header figure {
-      width: 30%;
-    }
-  
-    header nav {
-      width: 20%;
-    }
-  
-    header nav ul {
-      justify-content: space-between;
-    }
 
-    .header-divider {
-      display: none;
-    }
-
-    .flex-container figure {
+    header .flex-container figure {
     width: 50%;
     justify-content: flex-start;
     }
@@ -677,26 +681,16 @@ footer p {
     }
 
   .flex-container nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-flow: row nowrap;
     width: 30%;
     }
 
   .flex-container nav ul {
-    display: flex;
     justify-content: space-around;
-    align-items: center;
-    flex-flow: row nowrap;
-    list-style: none;
-    width: 100%;
     margin-right: 20px;
     }
 
-  .hero-section {
-    min-height: 600px;
-  }
+
+    /* Hero Styles - Desktop Homepage */
     
   .hero-section .flex-container {
     align-items: flex-start;
@@ -706,37 +700,31 @@ footer p {
     
   .hero-section h1 {
     font-size: 3.75em;
-    line-height: 1;
     width: 80%;
     margin-top: 0;
     margin-bottom: 0;
   }
 
+
+    /* Aside - Desktop Homepage */
   aside .newsletter-section .flex-container {
     padding: 30px 0;
     width: 70%;
   }
-    /* Reviews */
+    /* Testimonials - Desktop Homepage */
   
     .testimonial-section h2 {
       padding-bottom: 50px; 
       margin: 0;
     }
     
-    .flex-container figure img {
+    .testimonial-section .flex-container figure img {
       width: 80%;
     }
-    .testimonial-section article figure,
-    .testimonial-section article div {
-      width: 50%;
-    }
-
     .testimonial-section h3, p {
       width: 65%;
     }
 }
-
-
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
