@@ -253,7 +253,7 @@ aside .newsletter-section .flex-container {
 
 aside .flex-container .form-description,
 aside .flex-container .sign-up-form {
-  width: 40%;
+  width: 100%;
   margin: 0;
 }
 
@@ -395,6 +395,21 @@ input[type=button] {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* FAQ Styles - Mobile */
+.faq-section {
+  display: flex;
+  flex: row wrap;
+  justify-content: center;
+  background: #527158;
+  width: 100%;
+  padding: 20px 0;
+  font-weight: 400;
+}
+
+.faq-section h1 {
+  font-size: 2em;
 }
 
 /* Footer Styles - Mobile */
@@ -608,7 +623,8 @@ footer p {
 
     aside .flex-container .form-description,
     aside .flex-container .sign-up-form {
-       padding: 15px;
+      width: 40%; 
+      padding: 30px;
     }
   
     /* Features - Tablet Homepage */
@@ -712,6 +728,23 @@ footer p {
       padding-bottom: 50%;
     }
 
+    /* FAQ Styles - Tablet */
+
+    .faq-section .flex-container {
+      margin: 0;
+      display: flex;
+      flex: row wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .faq-section .flex-container .qa {
+      flex: 0 1 45%;
+      justify-content: space-between;
+      font-size: .75em;
+    }
+
     /* Footer - Tablet Homepage */
 
     .contact-info {
@@ -777,10 +810,10 @@ footer p {
 
 
     /* Aside - Desktop Homepage */
-  aside .newsletter-section .flex-container {
-    padding: 30px 0;
-    width: 70%;
-  }
+    aside .newsletter-section .flex-container {
+      padding: 30px 0;
+      width: 70%;
+    }
     /* Testimonials - Desktop Homepage */
   
     .testimonial-section h2 {
@@ -816,7 +849,19 @@ footer p {
       font-size: 3em;
       width: 100%
     }
+    /* FAQ Styles - Tablet */
 
+    .faq-section .flex-container h1 {
+      width: 100%;
+    }
+    .faq-section .flex-container .qa {
+      flex: 1 1 50%;
+      font-size: 1.10em;
+    }
+
+    .faq-section .flex-container p {
+      width: 85%;
+    }
 
 }
 
